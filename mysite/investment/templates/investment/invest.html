@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+.asteriskField {
+    display: none;
+}
+
+</style>
+{% load crispy_forms_tags %}
+<style>
+    .form-center1 {
+        margin-bottom: 100px; /* Adjust the value as needed */
+    }
+    </style>
+<div class="form-center1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-14">
+                <div class="card p-4">
+                    <h4 class="card-title font-weight-bold text-center">Enter the details</h4>
+                    <hr>
+                    <div class="card-body">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    {{ form.occupation|as_crispy_field }}
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    {{ form.time_to_manage|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    {{ form.time_to_reach_goal|as_crispy_field }}
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    {{ form.return_of_investment|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    {{ form.location|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                {{ form.pdf_file|as_crispy_field }}
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="{% url 'profile' %}" class="btn btn-secondary">Cancel</a>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

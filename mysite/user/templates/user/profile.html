@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}  
+
+<!-- User -->
+<br><br>
+<div class="container mx-auto">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 pb-4">
+            <div class="card p-4">
+                <h4 class="card-title font-weight-bold text-center">Profile Information</h4>
+                <hr>
+                <div class="card-text">
+                    <p class="text-muted mb-0" style="font-size: 12px">Username:</p>
+                    <p>{{ user.username }}</p>
+                    <p class="text-muted mb-0" style="font-size: 12px">Email:</p>
+                    <p>{{ user.email }}</p>
+                    <p class="text-muted mb-0" style="font-size: 12px">Name:</p>
+                    <p>{{ user.name }}</p>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <a href="{% url 'password_change' %}" class="btn btn-outline-info">Change Password</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <a href="{% url 'view_profile' %}" class="btn btn-dark">Show Profile</a>
+                                <a href="{% url 'update_profile' %}" class="btn btn-outline-primary">Edit Profile</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 pb-4">
+            <div class="card p-4">
+                <h4 class="card-title font-weight-bold text-center">Credit Loan</h4>
+                <hr>
+                <div class="card-text">
+                        <p class="text-muted mb-0" style="font-size: 12px">Availability Check:</p>
+                            <p>Due</p>
+                            <p class="text-muted mb-0" style="font-size: 12px">AVAILABLE</p>
+                            <p>Proceed <a href="{% url 'loan' %}" class="btn btn-outline-primary">Check</a></p>
+                    <p id="vertical-space"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+                <div class="card p-4">
+                    <h4 class="card-title font-weight-bold text-center">Investment Box</h4>
+                    <hr>
+                    <div class="card-text">
+                        <p>For required Suggestions, Click on check...</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="{% url 'invest' %}" class="btn btn-outline-primary">Check</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+</div>
+
+<br><br><br>
+
+{% endblock %}

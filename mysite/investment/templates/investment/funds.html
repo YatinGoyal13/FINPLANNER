@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="body">
+    <div class="black">
+        <h1 class="head">Portfolio Suggestion</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th class="width">S.No.</th>
+                <th class="width-2">Category</th>
+                <th>Subcategory</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for offer in filter_data3 %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ offer.type }}</td>
+                <td>{{ offer.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% comment %} <div class="blacks"> 
+    <h1 class="head"> Credit Offers</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th class="width">Offer ID</th>
+                <th class="width-3">Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for offer in filter_data2 %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ offer.type}}</td>
+                <td>{{ offer.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div> {% endcomment %}
+</div>
+{% endblock content %}

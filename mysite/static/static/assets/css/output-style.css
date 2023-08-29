@@ -1,0 +1,30 @@
+body{
+    background-image: -moz-linear-gradient();
+}
+
+.head{
+    background-color: black;
+    align-self: center;
+}
+th{
+    background-color: teal;
+    color: aliceblue;
+}
+th:hover{
+    font-size: 10px;
+    background-color: black;
+    color: azure;
+}
+td{
+    background-color: beige;
+    color: rgb(41, 35, 35);
+}
+td:hover{
+    
+    font-size: 10px;
+    background-color: black;
+    color: azure;
+}
+table{
+    margin-left: 20px;
+}
