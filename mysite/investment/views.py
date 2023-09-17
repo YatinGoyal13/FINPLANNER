@@ -10,8 +10,8 @@ from user.models import Profile
 from django.db.models import ExpressionWrapper, F
 from django.db.models.functions import ExtractYear, ExtractMonth, ExtractDay, Now
 from datetime import datetime
-pipeline=load('/Users/yatingoyal/Desktop/Data_signals 2/mysite/savedmodels/pipeline.joblib')
-pipeline2=load('/Users/yatingoyal/Desktop/Data_signals 2/mysite/savedmodels2/pipeline2.joblib')
+pipeline=load('/Users/yatingoyal/Desktop/FINPLANNER/mysite/savedmodels/pipeline.joblib')
+pipeline2=load('/Users/yatingoyal/Desktop/FINPLANNER/mysite/savedmodels2/pipeline2.joblib')
 
 
 
